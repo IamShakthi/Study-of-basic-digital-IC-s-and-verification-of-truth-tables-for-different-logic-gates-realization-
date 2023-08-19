@@ -52,16 +52,39 @@ The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will gi
 Y= A⊕B
 
 ## Procedure:
-Connect the supply (+5V) to the circuit
-Switch ON the main switch
-Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed.
-If the output is 1, then the bulb glows.
-Check all the gates following the same procedure.
+Create a New Project:
+
+Open Quartus and create a new project by selecting "File" > "New Project Wizard."
+Follow the wizard's instructions to set up your project, including specifying the project name, location, and target device (FPGA).
+Create a New Design File:
+
+Once the project is created, right-click on the project name in the Project Navigator and select "Add New File."
+Choose "Verilog HDL File" or "VHDL File," depending on your chosen hardware description language.
+Write the Combinational Logic Code:
+
+Open the newly created Verilog or VHDL file and write the code for your combinational logic.
+Compile the Project:
+
+To compile the project, click on "Processing" > "Start Compilation" in the menu.
+Quartus will analyze your code, synthesize it into a netlist, and perform optimizations based on your target FPGA device.
+Analyze and Fix Errors:
+
+If there are any errors or warnings during the compilation process, Quartus will display them in the Messages window.
+Review and fix any issues in your code if necessary.
+View the RTL diagram.
+Verification:
+
+Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF".
+Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All.
+Give the Input Combinations according to the Truth Table amd then simulate the Output Waveform.
 ## Program:
-/*
+
 Program to verify the truth table in quartus for the basic logic gates using Verilog programming.
+```
 Developed by: Yuvasakthi
 RegisterNumber: 212222240120
+```
+
 ```
 module exp1(a,b,yand,yor,ynot,yxor,ynand,ynor,yxnor);
 input a,b;
@@ -75,7 +98,7 @@ nor(ynor,a,b);
 xnor(yxnor,a,b); 
 endmodule 
 ```
-*/
+
 
 ## RTL realization:
 ![RTL](https://github.com/IamShakthi/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/117913445/4d8489d6-21c5-4d12-afa2-d26825318113)
